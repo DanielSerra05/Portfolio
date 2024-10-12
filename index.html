@@ -5,25 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currículo - Daniel Serra</title>
     <link rel="stylesheet" href="/css/normalize.css" />
+    <script src="scripts.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
   <body>
+    <button id="btn-menu" onclick="menu()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-menu"
+      >
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+    </button>
+
     <div class="sidebar">
-      <div>
-        <h1>Curriculo</h1>
-        <h2>2024</h2>
+      <div class="sidebar_header">
+        <div>
+          <h1>Curriculo</h1>
+          <h2>2024</h2>
+        </div>
+        <button id="sidebar_btn-menu" onclick="menu()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
       </div>
       <nav class="sidebar_menus">
-        <a href="#hero">Home</a>
-        <a href="#personal_section">Geral</a>
-        <a href="#education_section">Educação</a>
-        <a href="#skills_section">Habilidades</a>
-        <a href="#languages_section">Idiomas</a>
+        <a href="#hero" onclick="menu()">Home</a>
+        <a href="#personal_section" onclick="menu()">Geral</a>
+        <a href="#education_section" onclick="menu()">Educação</a>
+        <a href="#skills_section" onclick="menu()">Habilidades</a>
+        <a href="#languages_section" onclick="menu()">Idiomas</a>
       </nav>
+      <ul id="sidebar_themes-list">
+        <li>
+          <button onclick="changeTheme('red')" id="btn-red"></button>
+        </li>
+        <li>
+          <button onclick="changeTheme('yellow')" id="btn-yellow"></button>
+        </li>
+        <li>
+          <button onclick="changeTheme('blue')" id="btn-blue"></button>
+        </li>
+        <li>
+          <button onclick="changeTheme('cyan')" id="btn-cyan"></button>
+        </li>
+        <li>
+          <button onclick="changeTheme('pink')" id="btn-pink"></button>
+        </li>
+      </ul>
     </div>
+    <div class="sidebar-backdrop"></div>
     <div class="container">
       <section id="hero">
+        <div class="image-composition">
+          <span id="top-horizontal"></span>
+          <span id="top-vertical"></span>
+          <img src="/img/daniel.jpg" alt="photo" class="photo" />
+          <span id="bottom-horizontal"></span>
+          <span id="bottom-vertical"></span>
+        </div>
         <div>
           <h1>Olá, o meu nome é <span id="name">Daniel Serra</span></h1>
           <h2>Desenvolvedor Web</h2>
@@ -35,16 +99,9 @@
             eficaz em futuros projetos.
           </p>
         </div>
-        <div class="image-composition">
-          <span id="top-horizontal"></span>
-          <span id="top-vertical"></span>
-          <img src="/img/daniel.jpg" alt="photo" class="photo" />
-          <span id="bottom-horizontal"></span>
-          <span id="bottom-vertical"></span>
-        </div>
       </section>
 
-      <section id="personal_section">
+      <section>
         <h2>Informações Pessoais</h2>
         <p><strong>Nome:</strong> Daniel Alexandre Codinha Serra</p>
         <p><strong>Gênero:</strong> Masculino</p>

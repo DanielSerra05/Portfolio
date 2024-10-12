@@ -30,16 +30,19 @@ body {
   font-size: 20px;
   padding: 16px;
   color: white;
-  min-width: 200px;
+  min-width: 300px;
 }
 
+.sidebar h2 {
+  font-size: 14px;
+}
 .sidebar_menus {
   display: flex;
   flex: 1;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  padding: 36px;
+  padding: 24px;
 }
 
 .sidebar_menus a:not(:last-child) {
@@ -47,36 +50,74 @@ body {
   padding-bottom: 10px;
 }
 
-.hero {
+#hero {
   display: flex;
   padding: 20px;
   height: 100vh;
+  gap: 100px;
   align-items: center;
 }
 
-.hero h1 {
+#hero h1 {
   white-space: nowrap;
+  margin-bottom: 15px;
 }
 
-.hero p {
-  text-align: justify;
+#hero h2 {
+  margin-bottom: 15px;
 }
 
-.profile .content {
-  width: 100%;
-}
-
-.photo {
+#hero .photo {
   width: 300px;
   object-fit: cover;
   height: 400px;
-  box-shadow: 0 0 5px 5px #ee3d40;
+  margin: 50px;
+}
+
+.image-composition {
+  position: relative;
+}
+
+.image-composition #top-horizontal {
+  background-color: #ee3d40;
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: 0;
+  left: 0;
+}
+
+.image-composition #top-vertical {
+  background-color: #ee3d40;
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+.image-composition #bottom-horizontal {
+  background-color: #ee3d40;
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+}
+
+.image-composition #bottom-vertical {
+  background-color: #ee3d40;
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
 }
 
 h1 {
-  margin-top: 10px;
-  font-size: 24px;
+  font-size: 30px;
   color: #ffffff;
+  margin: 0;
 }
 
 a {
@@ -100,7 +141,7 @@ p {
 }
 
 h2 {
-  margin: 20px 0 10px;
+  margin: 0;
   font-size: 20px;
   color: #ee3d40;
 }

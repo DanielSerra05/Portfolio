@@ -169,9 +169,31 @@ body {
   margin: 50px;
 }
 
+#sidebar_btn-menu {
+  cursor: pointer;
+}
+
+#btn-menu {
+  cursor: pointer;
+}
+
+@media (min-width: 610px) {
+  .education_section_image-composition #left-bar {
+    height: 120px !important;
+  }
+  .education_section_image-composition #circle2 {
+    top: 100px !important;
+  }
+}
 @media (min-width: 992px) {
   .sidebar {
     display: flex;
+  }
+  #btn-menu {
+    display: none;
+  }
+  #sidebar_btn-menu {
+    display: none;
   }
 }
 
@@ -225,6 +247,86 @@ body {
   right: 0;
 }
 
+#personal_section {
+  background-color: transparent;
+}
+
+#personal_section p {
+  padding: 10px;
+  border-bottom: 1px solid rgba(var(--primary-color), 0.4);
+}
+
+#personal_section h2 {
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+
+#education_section h2 {
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+
+.education_section_image-composition {
+  position: relative;
+  max-width: fit-content;
+  margin-top: 20px;
+}
+
+.education_section_image-composition #left-bar {
+  background-color: rgb(var(--primary-color));
+  position: absolute;
+  width: 2px;
+  margin-top: 15px;
+  height: 150px;
+}
+
+.education_section_image-composition #circle {
+  background-color: rgb(var(--primary-color));
+  position: absolute;
+  width: 10px;
+  border-radius: 50%;
+  margin-top: 7px;
+  height: 10px;
+  left: -4px;
+}
+
+.education_section_image-composition #circle2 {
+  background-color: rgb(var(--primary-color));
+  position: absolute;
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  top: 130px;
+  left: -4px;
+}
+
+#education_section li {
+  margin-bottom: 68px;
+  margin-left: 15px;
+  list-style: none;
+  color: white;
+}
+#skills_section #skills_section-logos {
+  display: flex;
+}
+
+#skills_section .logo {
+  width: 50px;
+  object-fit: cover;
+  height: 50px;
+  margin: 30px;
+}
+
+#skills_section h2 {
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+
+#contacts_section h2 {
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+
 h1 {
   font-size: 30px;
   color: #ffffff;
@@ -248,7 +350,6 @@ a:visited {
 p {
   font-size: 16px;
   color: #e3e3e3;
-  margin: 10px 0;
 }
 
 h2 {
@@ -264,9 +365,4 @@ h2 {
 section {
   margin-bottom: 20px;
   padding: 15px;
-}
-#footer_daniel {
-  text-align: center;
-  font-size: 15px;
-  color: #777;
 }

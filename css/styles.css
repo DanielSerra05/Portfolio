@@ -207,7 +207,7 @@ body {
   }
 
   .sidebar-open .sidebar-backdrop {
-    display: unset;
+    display: none;
   }
   .sidebar-backdrop {
     background-color: transparent !important;

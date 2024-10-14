@@ -56,6 +56,16 @@ body {
   overflow-y: hidden;
 }
 
+.sidebar-open .sidebar {
+  display: flex;
+  position: fixed;
+  z-index: 2;
+}
+
+.sidebar-open .sidebar-backdrop {
+  display: block;
+}
+
 .sidebar {
   background-color: var(--foreground);
   min-height: 100vh;
@@ -79,15 +89,6 @@ body {
   right: 30px;
   top: 30px;
   color: #e3e3e3;
-}
-.sidebar-open .sidebar {
-  display: flex;
-  position: fixed;
-  z-index: 2;
-}
-
-.sidebar-open .sidebar-backdrop {
-  display: block;
 }
 
 .sidebar_header {
@@ -194,6 +195,22 @@ body {
   }
   #sidebar_btn-menu {
     display: none;
+  }
+  .sidebar-open .container {
+    overflow-y: auto;
+  }
+
+  .sidebar-open .sidebar {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+
+  .sidebar-open .sidebar-backdrop {
+    display: unset;
+  }
+  .sidebar-backdrop {
+    background-color: transparent !important;
   }
 }
 

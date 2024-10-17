@@ -148,6 +148,11 @@ body {
   background-color: rgb(var(--pink));
 }
 
+#box-name {
+  width: -webkit-fill-available;
+  max-width: 100vh;
+}
+
 #hero {
   padding: 20px;
   min-height: 100vh;
@@ -215,6 +220,9 @@ body {
   }
   .sidebar-backdrop {
     background-color: transparent !important;
+  }
+  #projects_section-body {
+    display: flex !important;
   }
 }
 
@@ -343,9 +351,34 @@ body {
   font-size: 28px;
 }
 
-#contacts_section h2 {
+#projects_section h2 {
   margin-bottom: 50px;
   font-size: 28px;
+}
+
+#projects_section-body {
+  display: grid;
+}
+
+#projects_section-body p {
+  align-content: center;
+  width: -webkit-fill-available;
+  max-width: 80vh;
+}
+
+#site {
+  width: 350px;
+  height: 200px;
+  margin: 50px;
+  overflow: hidden; /* Oculta partes que saem do contêiner */
+  box-shadow: 0 4px 15px rgba(var(--primary-color), 0.5); /* Sombra */
+  border-radius: 10px; /* Opcional: bordas arredondadas */
+}
+
+#site img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços em branco abaixo da imagem */
 }
 
 h1 {

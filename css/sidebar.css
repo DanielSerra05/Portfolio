@@ -1,0 +1,147 @@
+.sidebar-open .container {
+  overflow-y: hidden;
+}
+
+.sidebar-open .sidebar {
+  display: flex;
+  position: fixed;
+  z-index: 20;
+}
+
+.sidebar-open .sidebar-backdrop {
+  display: block;
+}
+
+.sidebar {
+  background-color: var(--foreground);
+  min-height: 100vh;
+  display: none;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 34px;
+  color: white;
+  min-width: 100%;
+}
+
+.sidebar-backdrop {
+  background-color: rgba(0, 0, 0, 0.411);
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: none;
+}
+
+#btn-menu {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  z-index: 10;
+  font-size: 30px;
+}
+
+#sidebar_btn-menu {
+  font-size: 40px;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
+
+.sidebar_header__text {
+  display: flex;
+  gap: 70px;
+  justify-content: space-between;
+}
+
+.sidebar_menus {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar_menus .line_decoration:hover::after {
+  width: 100%;
+}
+
+.sidebar_menus .line_decoration::after {
+  transition: width 500ms ease-out;
+}
+
+.sidebar_menus a {
+  width: fit-content;
+}
+
+#sidebar_themes-list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+#sidebar_themes-list button {
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1/1 auto;
+}
+
+.sidebar_header__subheading {
+  color: rgb(var(--primary-color));
+}
+
+#btn-red {
+  background-color: rgb(var(--red));
+}
+
+#btn-yellow {
+  background-color: rgb(var(--yellow));
+}
+
+#btn-blue {
+  background-color: rgb(var(--blue));
+}
+
+#btn-cyan {
+  background-color: rgb(var(--cyan));
+}
+
+#btn-pink {
+  background-color: rgb(var(--pink));
+}
+
+#sidebar_btn-menu,
+#btn-menu,
+#sidebar_themes-list button {
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    display: flex;
+  }
+  #btn-menu {
+    display: none;
+  }
+  #sidebar_btn-menu {
+    display: none;
+  }
+  .sidebar-open .container {
+    overflow-y: auto;
+  }
+
+  .sidebar-open .sidebar {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+
+  .sidebar {
+    min-width: 300px;
+  }
+
+  .sidebar-open .sidebar-backdrop {
+    display: none;
+  }
+  .sidebar-backdrop {
+    background-color: transparent !important;
+  }
+}

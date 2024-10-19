@@ -1,0 +1,49 @@
+.heading {
+  font-family: Syne, sans-serif;
+}
+
+.text_xl {
+  position: relative;
+  font-size: 40px;
+}
+
+.text_l {
+  font-size: 32px;
+}
+
+.text_md {
+  font-size: 20px;
+}
+
+.line_decoration,
+.line_decoration--xl {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.line_decoration::after {
+  width: 24px;
+  height: 1px;
+  background-color: rgb(var(--primary-color));
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+}
+
+.line_decoration--xl::after {
+  width: 80px;
+  height: 1px;
+  background-color: rgb(var(--primary-color));
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+}
+
+.container {
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

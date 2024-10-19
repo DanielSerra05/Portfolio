@@ -5,60 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currículo - Daniel Serra</title>
     <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/utils.css" />
+    <link rel="stylesheet" href="/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/landing.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="scripts.js"></script>
-    <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
   <body>
     <button id="btn-menu" onclick="menu()">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-menu"
-      >
-        <line x1="4" x2="20" y1="12" y2="12" />
-        <line x1="4" x2="20" y1="6" y2="6" />
-        <line x1="4" x2="20" y1="18" y2="18" />
-      </svg>
+      <i class="ri-menu-3-line"></i>
     </button>
 
     <div class="sidebar">
       <div class="sidebar_header">
-        <div>
-          <h1>Currículo</h1>
-          <h2>2024</h2>
+        <div class="sidebar_header__text">
+          <h1 class="text_xl">Portfólio</h1>
+          <button id="sidebar_btn-menu" onclick="menu()">
+            <i class="ri-add-line"></i>
+          </button>
         </div>
-        <button id="sidebar_btn-menu" onclick="menu()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-x"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </button>
+
+        <h2 class="text_md sidebar_header__subheading">2024</h2>
       </div>
       <nav class="sidebar_menus">
-        <a href="#hero" onclick="menu()">Início</a>
-        <a href="#personal_section" onclick="menu()">Pessoal</a>
-        <a href="#education_section" onclick="menu()">Educação</a>
-        <a href="#skills_section" onclick="menu()">Habilidades</a>
-        <a href="#projects_section" onclick="menu()">Projetos</a>
+        <a class="line_decoration" href="#hero" onclick="menu()">Início</a>
+        <a class="line_decoration" href="#education" onclick="menu()"
+          >Educação</a
+        >
+        <a class="line_decoration" href="#skills_section" onclick="menu()"
+          >Habilidades</a
+        >
+        <a class="line_decoration" href="#projects_section" onclick="menu()"
+          >Projetos</a
+        >
       </nav>
       <ul id="sidebar_themes-list">
         <li>
@@ -81,8 +65,8 @@
     <div class="sidebar-backdrop"></div>
     <div class="container">
       <div class="main">
-        <section id="hero">
-          <div class="image-composition">
+        <section id="hero" class="hero">
+          <div class="hero__image_composition">
             <span id="top-horizontal"></span>
             <span id="top-vertical"></span>
             <img src="/img/daniel.jpg" alt="photo" class="photo" />
@@ -90,8 +74,10 @@
             <span id="bottom-vertical"></span>
           </div>
           <div id="box-name">
-            <h1>Olá, o meu nome é <span id="name">Daniel Serra</span></h1>
-            <h2>Desenvolvedor Web</h2>
+            <h1 class="text_l">
+              Olá, o meu nome é <span id="name">Daniel Serra</span>
+            </h1>
+            <h2 class="intro_subheading">Desenvolvedor Web</h2>
             <p>
               Atualmente, estou a estudar Desenvolvimento Web e Multimédia no
               Instituto Politécnico de Leiria. Estou à procura de oportunidades
@@ -102,81 +88,131 @@
           </div>
         </section>
 
-        <section>
-          <div id="personal_section">
-            <h2>Informações Pessoais</h2>
-            <p><strong>Nome:</strong> Daniel Alexandre Codinha Serra</p>
-            <p><strong>Gênero:</strong> Masculino</p>
-            <p><strong>Cidade:</strong> Nazaré, Leiria</p>
-            <p><strong>Idiomas:</strong> Português(Nativo), Inglês(básico)</p>
-            <p><strong>Hobbies:</strong> Jogar computador, assistir futebol</p>
+        <section id="education" class="education">
+          <div>
+            <div class="education__education">
+              <h2 class="text_xl line_decoration--xl">Educação</h2>
+              <ul class="education__education__timeline">
+                <span id="vertical_line"></span>
+                <li class="education__education__timeline__item">
+                  <i class="ri-circle-fill" id="circle"></i>
+                  <div>
+                    <p>Escola Básica e Secundária Amadeu Gaudencio</p>
+                    <p>Ano de Conclusão: 2024</p>
+                  </div>
+                </li>
+                <li class="education__education__timeline__item">
+                  <i class="ri-circle-fill" id="circle"></i>
+                  <div>
+                    <p>IPL - Curso: Desenvolvimento Web e Multimédia</p>
+                    <p>Previsão de Conclusão: 2026</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <section id="education_section">
-          <h2>Educação</h2>
-          <div class="education_section_image-composition">
-            <span id="left-bar"></span>
-            <span id="circle"></span>
-            <span id="circle2"></span>
+        <section id="skills_section" class="skills_section">
+          <h2 class="text_xl line_decoration--xl">Habilidades</h2>
+
+          <div class="skills_section__box">
+            <div class="skills_section__box__block">
+              <h3 class="skills_section__box__block__title line_decoration">
+                Front End
+              </h3>
+              <ul class="skills_section__box__block__list">
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>
+                  HTML
+                </li>
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>CSS
+                </li>
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>JavaScript
+                </li>
+              </ul>
+            </div>
+
+            <div class="skills_section__box__block">
+              <h3 class="skills_section__box__block__title line_decoration">
+                Tools
+              </h3>
+              <ul class="skills_section__box__block__list">
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>Git
+                </li>
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>Github
+                </li>
+              </ul>
+            </div>
+
+            <div class="skills_section__box__block">
+              <h3 class="skills_section__box__block__title line_decoration">
+                Design
+              </h3>
+              <ul class="skills_section__box__block__list">
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>Photoshop
+                </li>
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>Ilustrator
+                </li>
+                <li class="skills_section__box__block__list__item">
+                  <i class="ri-check-line"></i>Figma
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul>
-            <li>
-              Escola Básica e Secundária Amadeu Gaudencio - Ano de Conclusão:
-              2024
+
+          <p><strong>Em aprendizagem:</strong> PHP, Node</p>
+        </section>
+
+        <section id="projects_section" class="projects_section">
+          <h2 class="text_xl line_decoration--xl">Projetos</h2>
+
+          <div class="projects_section__grid">
+            <img
+              src="img/site.png"
+              alt="site"
+              class="projects_section__grid__img"
+            />
+
+            <div class="projects_section__grid__content">
+              <p><strong>Titulo: </strong>Portfólio</p>
+              <p>
+                <strong>Descrição: </strong>Este currículo foi criado com HTML,
+                CSS e JavaScript. O objetivo foi apresentar as minhas
+                habilidades e experiências de forma clara e simples, permitindo
+                um aprendizado prático destas tecnologias.
+              </p>
+              <p><strong>Tech: </strong>HTML,CSS,Javascript,Github,Figma</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <ul class="footer__list">
+            <li class="footer__list_item">
+              <a
+                href="https://github.com/DanielSerra05"
+                alt="Github"
+                title="Github"
+                ><i class="ri-github-fill text_md"></i>
+              </a>
             </li>
-            <li>
-              IPL - Curso: Desenvolvimento Web e Multimédia - Previsão de
-              Conclusão: 2026
+            <li class="footer__list_item">
+              <a
+                href="mailto:danielcserra05@gmail.com"
+                title="danielcserra05@gmail.com"
+                ><i class="ri-mail-line text_md"></i
+              ></a>
             </li>
           </ul>
-        </section>
-
-        <section id="skills_section">
-          <h2>Habilidades</h2>
-          <div id="skills_section-logos">
-            <img src="/img/html.png" alt="html" class="logo" />
-            <img src="/img/css.png" alt="css" class="logo" />
-            <img src="/img/js.png" alt="js" class="logo" />
-            <img src="/img/python.png" alt="python" class="logo" />
-          </div>
-        </section>
-
-        <section id="projects_section">
-          <h2>Projetos</h2>
-          <div id="projects_section-body">
-            <img src="img/site.png" alt="site" id="site" />
-            <p>
-              <strong>Projeto: </strong>Este currículo foi criado com HTML, CSS
-              e JavaScript. O objetivo foi apresentar as minhas habilidades e
-              experiências de forma clara e simples, permitindo um aprendizado
-              prático destas tecnologias.
-            </p>
-          </div>
-        </section>
+        </footer>
       </div>
-      <footer>
-        <p>danielcserra05@gmail.com</p>
-        <ul>
-          <li>
-            <a href="https://github.com/DanielSerra05" alt="Github"
-              ><svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 496 512"
-                height="16px"
-                width="16px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                ></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </footer>
     </div>
   </body>
 </html>

@@ -3,6 +3,11 @@
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "BackSignature"; /*a name to be used later*/
+  src: url("/fonts/BlackSignature_PERSONAL_USE_ONLY.otf"); /*URL to font*/
+}
+
 :root {
   /* Colors */
   --backgound: #151515;
@@ -221,9 +226,6 @@ body {
   .sidebar-backdrop {
     background-color: transparent !important;
   }
-  #projects_section-body {
-    display: flex !important;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -232,6 +234,9 @@ body {
   }
   .sidebar {
     display: flex;
+  }
+  #projects_section-body {
+    display: flex !important;
   }
 }
 
@@ -414,6 +419,7 @@ h2 {
 
 #name {
   color: rgb(var(--primary-color));
+  font-family: BackSignature, sans-serif;
 }
 
 section {

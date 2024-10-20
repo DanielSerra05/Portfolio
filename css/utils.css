@@ -15,10 +15,14 @@
   font-size: 20px;
 }
 
-.line_decoration,
-.line_decoration--xl {
+.line_decoration {
   position: relative;
   padding-bottom: 10px;
+}
+
+.line_decoration--xl {
+  position: relative;
+  padding-bottom: 24px;
 }
 
 .line_decoration::after {

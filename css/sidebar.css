@@ -3,9 +3,7 @@
 }
 
 .sidebar-open .sidebar {
-  display: flex;
-  position: fixed;
-  z-index: 20;
+  transform: translateX(0);
 }
 
 .sidebar-open .sidebar-backdrop {
@@ -15,19 +13,22 @@
 .sidebar {
   background-color: var(--foreground);
   min-height: 100vh;
-  display: none;
+  display: flex;
   flex-direction: column;
   font-size: 20px;
   padding: 34px;
   color: white;
-  min-width: 100%;
+  min-width: 300px;
+  transition: all 500ms ease;
+  z-index: 20;
 }
 
 .sidebar-backdrop {
-  background-color: rgba(0, 0, 0, 0.411);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 15;
   display: none;
 }
 
@@ -128,20 +129,29 @@
     overflow-y: auto;
   }
 
-  .sidebar-open .sidebar {
+  /* .sidebar-open .sidebar {
     display: flex;
     position: relative;
     z-index: 2;
-  }
-
-  .sidebar {
-    min-width: 300px;
-  }
+  } */
 
   .sidebar-open .sidebar-backdrop {
     display: none;
   }
   .sidebar-backdrop {
     background-color: transparent !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
   }
 }

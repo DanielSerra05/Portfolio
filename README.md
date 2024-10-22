@@ -1,6 +1,6 @@
 # Portfólio Pessoal
 
-Este projeto é um portfólio pessoal desenvolvido com HTML, CSS e JavaScript, com o objetivo de apresentar os meus trabalhos e habilidades. Durante o desenvolvimento, foram utilizadas várias técnicas e abordagens que contribuíram para o aprendizado e melhoria das habilidades em desenvolvimento front-end.
+Este projeto é um portfólio pessoal desenvolvido com HTML, CSS e JavaScript, com o objetivo de criar o meu portófolio. Durante o desenvolvimento, foram utilizadas várias técnicas e abordagens que contribuíram para o aprendizado e melhoria das habilidades em desenvolvimento front-end.
 
 ## Tecnologias Utilizadas
 
@@ -35,11 +35,11 @@ As Media Queries foram utilizadas para tornar o layout responsivo, adaptando o d
 
 #### 1.3 Metodologia BEM
 
-A metodologia BEM (Block, Element, Modifier) ajudou na organização e nomenclatura das classes, tornando o código mais claro e escalável. Seguiu-se a convenção:
+A metodologia BEM (Block, Element, Modifier) ajudou na organização e nomenclatura das classes, tornando o código mais claro e escalável. Estrutura:
 
-- **Bloco**: Componente independente do layout (e.g., `.sidebar`).
-- **Elemento**: Parte do bloco que realiza uma função específica (e.g., `.sidebar_header`).
-- **Modificador**: Variação ou estado de um bloco ou elemento (e.g., `sidebar_header__text`).
+- **Bloco**: Componente independente do layout (e.g., `.hero`).
+- **Elemento**: Parte do bloco que realiza uma função específica (e.g., `.hero__line`).
+- **Modificador**: Variação ou estado de um bloco ou elemento (e.g., `.hero__line .hero__line--top-horizontal`).
 
 #### 1.4 Declaração de Variáveis
 
@@ -69,7 +69,7 @@ A propriedade `gap` foi utilizada em contêineres com layout Flexbox para espaç
 
 #### 2.1 Funções
 
-Foram criadas funções para modularizar o código e melhorar a legibilidade. Algumas funções recebiam argumentos nomeados para facilitar o entendimento.
+Foram criadas funções para modularizar o código, permitir interação do utilizador e melhorar a manutenção.
 
 ```javascript
 function changeTheme(color) {
@@ -84,7 +84,7 @@ function changeTheme(color) {
 
 #### 2.2 Manipulação do DOM
 
-Utilizou-se a manipulação do DOM para alterar o conteúdo e os estilos dos elementos, bem como para interagir com o usuário.
+Utilizou-se a manipulação do DOM para alterar o classes e os estilos dos elementos, bem como as variáveis de CSS.
 
 ```javascript
 function menu() {
@@ -98,7 +98,7 @@ function menu() {
 Foram utilizados IDs para criar âncoras e permitir a navegação para seções específicas da página.
 
 ```html
-<a class="line_decoration" href="#hero" onclick="menu()">Início</a>
+<a class="line_decoration" href="#hero" onclick="toggleMenu()">Início</a>
 
 <section id="education" class="education">
   <div>
@@ -136,10 +136,12 @@ A estrutura do projeto foi pensada para ser modular e fácil de entender:
 
 ## Futuras Melhorias
 
-- Adicionar animações para melhorar a experiência do usuário.
-- Implementar um modo escuro.
+- Adicionar animações para melhorar a experiência do utilizador.
+- Implementar um modo light.
 - Melhorar a acessibilidade seguindo as boas práticas do WCAG.
 
 ## Conclusão
 
-Este projeto foi uma oportunidade de aplicar e consolidar conhecimentos de desenvolvimento web. Documentar as aprendizagens no README é uma forma de registrar o progresso e refletir sobre as melhorias alcançadas.
+Este projeto foi uma oportunidade tanto para aplicar e consolidar os conhecimentos adquiridos nas aulas de desenvolvimento web, como também para desenvolver a capacidade de resolver problemas de forma independente, aprender a pesquisar soluções e entender como aplicá-las. Documentar as aprendizagens no README foi uma forma de registar o progresso e refletir sobre as melhorias alcançadas.
+
+[Design Figma](https://www.figma.com/design/jbIXamyCqmZtnCLvkciq6O/Portf%C3%B3lio-DS?node-id=0-1&t=78neHeLoltC76Wfd-1)

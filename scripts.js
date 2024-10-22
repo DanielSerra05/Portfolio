@@ -25,6 +25,7 @@ function setThemeColor(color) {
       break;
   }
 }
+
 function changeTheme(color) {
   localStorage.setItem("theme", color);
 

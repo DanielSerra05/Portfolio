@@ -88,8 +88,9 @@
 }
 
 #sidebar_themes-list button {
-  border-radius: 50%;
+  border-radius: 10px;
   width: 20px;
+  transition: padding 400ms ease-out;
   aspect-ratio: 1/1 auto;
 }
 

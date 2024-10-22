@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <button id="btn-menu" onclick="menu()">
+    <button id="btn-menu" onclick="toggleMenu()">
       <i class="ri-menu-3-line"></i>
     </button>
 
@@ -26,7 +26,7 @@
       <div class="sidebar_header">
         <div class="sidebar_header__text">
           <h1 class="text_xl">Portfólio</h1>
-          <button id="sidebar_btn-menu" onclick="menu()">
+          <button id="sidebar_btn-menu" onclick="toggleMenu()">
             <i class="ri-add-line"></i>
           </button>
         </div>
@@ -34,14 +34,19 @@
         <h2 class="text_md sidebar_header__subheading">2024</h2>
       </div>
       <nav class="sidebar_menus">
-        <a class="line_decoration" href="#hero" onclick="menu()">Início</a>
-        <a class="line_decoration" href="#education" onclick="menu()"
+        <a class="line_decoration" href="#hero" onclick="toggleMenu()"
+          >Início</a
+        >
+        <a class="line_decoration" href="#education" onclick="toggleMenu()"
           >Educação</a
         >
-        <a class="line_decoration" href="#skills_section" onclick="menu()"
+        <a class="line_decoration" href="#skills_section" onclick="toggleMenu()"
           >Habilidades</a
         >
-        <a class="line_decoration" href="#projects_section" onclick="menu()"
+        <a
+          class="line_decoration"
+          href="#projects_section"
+          onclick="toggleMenu()"
           >Projetos</a
         >
       </nav>
@@ -63,7 +68,7 @@
         </li>
       </ul>
     </div>
-    <div class="sidebar-backdrop" onclick="menu()"></div>
+    <div class="sidebar-backdrop" onclick="toggleMenu()"></div>
     <div class="container">
       <div class="main">
         <section id="hero" class="hero">

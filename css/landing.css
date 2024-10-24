@@ -75,17 +75,22 @@
 
 /* EDUCATION START */
 .education {
-  background-color: var(--background-lighter);
+  background-color: rgb(var(--primary-color));
 }
 
 .education__education {
-  color: #e3e3e3;
+  color: rgb(var(--text-color));
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 50px;
   border-radius: 5px;
 }
 
+.education__education p,
+.education__education h2,
+.education__education strong {
+  color: rgb(var(--text-color));
+}
 .education__education__timeline {
   position: relative;
   display: flex;
@@ -95,7 +100,7 @@
 }
 
 .education__education #vertical_line {
-  background-color: rgb(var(--primary-color));
+  background-color: rgb(var(--text-color));
   position: absolute;
   left: 38px;
   top: 0;
@@ -111,13 +116,13 @@
 
 .education__education #circle {
   z-index: 1;
-  color: rgb(var(--primary-color));
+  color: rgb(var(--text-color));
 }
 /* EDUCATION END */
 
 /* SKILLS SECTIONS START */
 .skills_section {
-  gap: 70px;
+  gap: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -153,9 +158,13 @@
 /* PROJECTS SECTION START */
 .projects_section {
   display: flex;
-  background-color: var(--background-lighter);
+  background-color: rgb(var(--primary-color));
   flex-direction: column;
-  gap: 70px;
+  gap: 50px;
+}
+
+.projects_section h2 {
+  color: rgb(var(--text-color));
 }
 
 .projects_section__grid {
@@ -171,6 +180,10 @@
   flex-direction: column;
 }
 
+.projects_section__grid__content p,
+.projects_section__grid__content strong {
+  color: rgb(var(--text-color));
+}
 .projects_section__grid__img {
   width: 350px;
 }

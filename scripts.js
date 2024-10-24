@@ -1,5 +1,7 @@
 function setThemeColor(color) {
   const red = "238, 61, 64",
+    black = "0,0,0",
+    white = "255,255,255",
     blue = "30,144,255",
     yellow = "255,215,0",
     cyan = "0,255,255",
@@ -8,20 +10,23 @@ function setThemeColor(color) {
   switch (color) {
     case "red":
       document.documentElement.style.setProperty("--primary-color", red);
-      console.log("red");
+      document.documentElement.style.setProperty("--text-color", white);
       break;
     case "blue":
       document.documentElement.style.setProperty("--primary-color", blue);
-      console.log("blue");
+      document.documentElement.style.setProperty("--text-color", white);
       break;
     case "yellow":
       document.documentElement.style.setProperty("--primary-color", yellow);
+      document.documentElement.style.setProperty("--text-color", black);
       break;
     case "cyan":
       document.documentElement.style.setProperty("--primary-color", cyan);
+      document.documentElement.style.setProperty("--text-color", black);
       break;
     case "pink":
       document.documentElement.style.setProperty("--primary-color", pink);
+      document.documentElement.style.setProperty("--text-color", white);
       break;
   }
 }
